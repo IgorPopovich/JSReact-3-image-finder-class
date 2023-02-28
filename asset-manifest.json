@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/JSReact-3-image-finder-class/static/css/main.810284e8.css",
+    "main.js": "/JSReact-3-image-finder-class/static/js/main.ff627688.js",
+    "index.html": "/JSReact-3-image-finder-class/index.html",
+    "main.810284e8.css.map": "/JSReact-3-image-finder-class/static/css/main.810284e8.css.map",
+    "main.ff627688.js.map": "/JSReact-3-image-finder-class/static/js/main.ff627688.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.810284e8.css",
+    "static/js/main.ff627688.js"
+  ]
+}
