@@ -15,11 +15,12 @@ class ImageGallery extends Component {
     startShowLoader: false,
     showLoadBtn: false,
     imagename: '',
+    disableBtn: false
   }
   
-
   loadPlus = async () => {
     this.setState({ showLoader: true })
+    this.setState({ disableBtn: true })
     await this.setState({ page: this.state.page + 1 })
       api.fetchImages(this.state.imagename, this.state.page)
       .then((data) => {
@@ -32,6 +33,7 @@ class ImageGallery extends Component {
       })
       .catch(error => console.log(error))
       this.setState({ showLoader: false })
+      this.setState({ disableBtn: false })
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -67,7 +69,7 @@ render() {
             </ul> 
             <div>
               
-              {this.state.showLoadBtn && <Button show={this.state.showLoader} loadPlus={this.loadPlus} />}
+              {this.state.showLoadBtn && <Button disBtn={this.state.disableBtn} show={this.state.showLoader} loadPlus={this.loadPlus} />}
             </div>
   </div>
   )
