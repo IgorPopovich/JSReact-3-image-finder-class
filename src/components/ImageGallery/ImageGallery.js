@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Notiflix from 'notiflix';
-import './ImageGallery.css';
+import css from './ImageGallery.module.css';
 import {ImageGalleryItem} from '../ImageGalleryItem/ImageGalleryItem';
 import { Button } from '../Button/Button';
 import StartLoader from '../StartLoader/StartLoader';
@@ -66,9 +67,9 @@ class ImageGallery extends Component {
 
 render() {
   return (
-    <div className='main'>
+    <div className={css.main}>
             {this.state.startShowLoader && <StartLoader />}
-            <ul className="imageGallery">
+            <ul className={css.imageGallery}>
               {this.state.items.length > 0 && this.state.items.map(( item, index ) => (
                 <ImageGalleryItem key={index} oncl={this.state.startShowLoader} item={item} />
               ))}
@@ -80,8 +81,17 @@ render() {
   </div>
   )
 }
-
-  
 }
+
+ImageGallery.propTypes = {
+  page: PropTypes.number,
+  items: PropTypes.array,
+  showLoader: PropTypes.bool,
+  startShowLoader: PropTypes.bool,
+  showLoadBtn: PropTypes.bool,
+  imagename: PropTypes.string,
+  disableBtn: PropTypes.bool,
+};
+
 
 export default ImageGallery;

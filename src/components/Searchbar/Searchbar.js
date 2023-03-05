@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Notiflix from 'notiflix';
-import './Searchbar.css';
+import css from './Searchbar.module.css';
+
+import PropTypes from 'prop-types';
 
 export default class Searchbar extends Component  {
 
@@ -25,14 +27,14 @@ export default class Searchbar extends Component  {
 
   render() {
     return (
-      <header className="searchbar">
-        <form className="searchForm" onSubmit={this.handleSubmit}>
-          <button type="submit" className="searchForm-button">
-            <span className="searchForm-button-label">Search</span>
+      <header className={css.searchBar}>
+        <form className={css.searchForm} onSubmit={this.handleSubmit}>
+          <button type="submit" className={css.searchFormButton}>
+            <span className={css.searchFormButtonLabel}>Search</span>
             <img src='https://w7.pngwing.com/pngs/739/993/png-transparent-computer-icons-google-search-search-miscellaneous-desktop-wallpaper-android-thumbnail.png' alt="" />
           </button>
       
-          <input className="searchForm-input"
+          <input className={css.searchFormInput}
           onChange={this.handleNameChange}
           value={this.state.imagename}
            type="text" name="query" 
@@ -44,3 +46,6 @@ export default class Searchbar extends Component  {
   }
 };
 
+Searchbar.propTypes = {
+  imagename: PropTypes.string,
+};

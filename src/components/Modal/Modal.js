@@ -1,6 +1,6 @@
 import React from 'react';
 import {createPortal} from 'react-dom';
-import './Modal.css';
+import css from './Modal.module.css';
 
 const modalRoot = document.getElementById('modal-root')
 
@@ -13,9 +13,9 @@ export const Modal = ({ url, modalOpen }) => {
     }
 
     return createPortal(
-    <div className="overlay" onClick={closuFunction}>
-      <div className="modal">
-        <img className='imgModal' src={url} alt="" />
+    <div className={css.overlay} onClick={closuFunction}>
+      <div className={css.modal}>
+        <img className={css.imgModal} src={url} alt="" />
       </div>
     </div>, 
     modalRoot)

@@ -1,4 +1,4 @@
-#StartLoader {
+.StartLoader {
     z-index: 1;
     width: 50px;
     height: 50px;
@@ -10,7 +10,7 @@
     animation: spin 1s linear infinite;
   }
 
-  #StartLoaderContainer {
+  .StartLoaderContainer {
     align-items: center;
     z-index: 2;
     margin-top: 100px;

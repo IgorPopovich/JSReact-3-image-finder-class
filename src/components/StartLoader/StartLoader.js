@@ -1,10 +1,11 @@
-import './StartLoader.css';
+
+import css from './StartLoader.module.css';
 
 const StartLoader = () => {
     return (
-        <div id="StartLoaderContainer">
-            <p className='loadingTitle'>Loading...</p>
-            <div id="StartLoader">
+        <div className={css.StartLoaderContainer}>
+            <p className={css.loadingTitle}>Loading...</p>
+            <div className={css.StartLoader}>
             </div>
         </div>
   );

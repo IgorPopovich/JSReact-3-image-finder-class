@@ -1,4 +1,4 @@
-.searchbar {
+.searchBar {
     top: 0;
     left: 0;
     position: sticky;
@@ -23,7 +23,7 @@
     overflow: hidden;
   }
   
-  .searchForm-button {
+  .searchFormButton {
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -38,11 +38,11 @@
     outline: none;
   }
   
-  .searchForm-button:hover {
+  .searchFormButton:hover {
     opacity: 1;
   }
   
-  .searchForm-button-label {
+  .searchFormButtonLabel {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -54,7 +54,7 @@
     border: 0;
   }
   
-  .searchForm-input {
+  .searchFormInput {
     display: inline-block;
     width: 100%;
     font: inherit;
@@ -65,6 +65,6 @@
     padding-right: 4px;
   }
   
-  .searchForm-input::placeholder {
+  .searchFormInput::placeholder {
     font: inherit;
   }
