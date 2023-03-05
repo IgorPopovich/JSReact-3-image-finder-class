@@ -29,6 +29,7 @@ class ImageGallery extends Component {
           this.setState({ showLoadBtn: true })
         } else {
           this.setState({ showLoadBtn: false })
+          Notiflix.Notify.failure(`Кінец галереї`);
         }
       })
       .catch(error => console.log(error))
@@ -48,7 +49,12 @@ class ImageGallery extends Component {
         api.fetchImages(nextName, this.props.page)
         .then((data) => {
           this.setState({ items: data.hits })
-          Notiflix.Notify.success(`Всего найдено картинок: ${data.totalHits}`);
+          if (data.hits.length > 0) {
+            Notiflix.Notify.success(`Всего найдено картинок: ${data.totalHits}`);
+          }
+          if (data.hits.length < 1) {
+            Notiflix.Notify.failure(`Даних по вашому запиту немає`);
+          }
           if (data.hits.length > 8) {
             this.setState({ showLoadBtn: true })
           }
