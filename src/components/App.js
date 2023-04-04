@@ -7,18 +7,23 @@ import css from './App.module.css';
 export default class App extends Component {
   state = {
     imagename: '',
-    page: 1
+    page: 1,
+    isLoading: false,
   }
 
   handleFormSubmit = (name) => {
     this.setState({ imagename: name })
   }
+
+  isLoadingFunc = (name) => {
+    this.setState({ isLoading: name })
+  }
   
   render () {
     return (
       <div className={css.main}>
-        {<Searchbar onSubmit={this.handleFormSubmit} />}
-        <ImageGallery imagename={this.state.imagename} page={this.state.page} />
+        {<Searchbar isLoading={this.isLoadingFunc} onSubmit={this.handleFormSubmit} />}
+        <ImageGallery isLoadingFunc={this.isLoadingFunc} isLoading={this.state.isLoading} imagename={this.state.imagename} page={this.state.page} />
     </div>
     )
   }

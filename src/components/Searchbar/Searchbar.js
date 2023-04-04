@@ -7,7 +7,8 @@ import PropTypes from 'prop-types';
 export default class Searchbar extends Component  {
 
   state = {
-    imagename: ''
+    imagename: '',
+    load: false
   }
 
   handleNameChange = (event) => {
@@ -22,6 +23,7 @@ export default class Searchbar extends Component  {
       return
     }
     this.props.onSubmit(this.state.imagename)
+    this.props.isLoading(true)
     this.setState({ imagename: '' })
   }
 
