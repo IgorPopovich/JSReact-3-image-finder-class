@@ -1,33 +1,20 @@
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .modal {
-    width: 800px;
-    width: 600px;
-    position: relative;
-  }
-  
-  .closeModal {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    margin-top: 5px;
-    right: 5px;
-    color: #ffffff;
-    cursor: pointer;
-    transition: 200ms;
-  }
-  
-  .closeModal:hover {
-    transform: scale(1.2);
-    transition: 200ms;
-  }
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.Modal {
+  width: 75%;
+  width: 50%;
+  position: relative;
+  margin-top: 40px;
+}
+
