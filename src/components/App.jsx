@@ -31,9 +31,7 @@ export class App extends Component {
   }
 
   getImages = async (query, page) => {
-    // this.setState({ loadMore: false });
     this.setState({ isLoading: true });
-    // this.setState({ showLoadBtn: true });
     if (!query) {
       return;
     }
@@ -45,7 +43,7 @@ export class App extends Component {
       }
 
       if (this.state.page === 1) {
-        Notiflix.Notify.success(`Всего найдено картинок: ${totalHits}`);
+        Notiflix.Notify.success(`Знайдено картинок: ${totalHits}`);
       }
       this.setState(prevState => ({
         images: [...prevState.images, ...hits],

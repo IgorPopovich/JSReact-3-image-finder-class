@@ -16,7 +16,7 @@ export class Searchbar extends Component {
   handleSubmit = e => {
     e.preventDefault();
     if (this.state.searchQuery.trim() === '') {
-      Notiflix.Notify.failure('Введите слово в поле "Search"');
+      Notiflix.Notify.failure('Введіть слово в поле "Search"');
       return;
     }
     this.props.onSubmit(this.state.searchQuery);
